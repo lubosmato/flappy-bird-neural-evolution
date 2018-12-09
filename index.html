@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <style>
+        canvas {
+            border: 1px solid rgb(199, 199, 199);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <h1>Flappy Bird Neural Evolution</h1>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <div id="sketch-holder">
+
+                </div>
+            </div>
+            <div class="col">
+                <div id="controls">
+                    <h4>Controls</h4>
+
+                    <div class="row align-items-end mt-3">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="generation-size" class="small">Game speed:</label>
+                                <div id="speed-slider"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="generation-size" class="small">Pipe space:</label>
+                            <div id="space-slider"></div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-end">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="generation-size" class="small">Generation size:</label>
+                                <div id="generation-size"></div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="generation-number" class="small">Generation number:</label>
+                                <div id="generation-number"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-end">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="generation-best-score" class="small">Generation best score:</label>
+                                <div id="generation-best-score"></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="population-best-score" class="small">Population best score:</label>
+                                <div id="population-best-score"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <h4>Load/Save</h4>
+                    <div class="row align-items-end">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="bird-brain-json" class="small">Brain JSON:</label>
+                                <textarea rows="8" id="bird-brain-json" class="form-control form-control-sm"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button id="add-bird" class="btn btn-danger btn-sm">Add Bird</button>
+                            <button id="export-best" class="btn btn-info btn-sm">Export Best</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="js/p5.min.js"></script>
+    <script src="js/p5.dom.min.js"></script>
+    <script src="js/p5.collide2d.min.js"></script>
+    <script src="js/neataptic.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
